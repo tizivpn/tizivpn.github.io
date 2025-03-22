@@ -1,4 +1,4 @@
-# 梯子VPN | 3月20日21.3M/S|免费V2ray/Clash/Shadowrocket/SSR订阅节点  更新时间 2025-03-20 10:12:29
+# 梯子VPN | 3月22日19.6M/S|免费V2ray/Shadowrocket/Clash/SSR订阅节点  更新时间 2025-03-22 08:57:43
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://tizivpn.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://tizivpn.github.io/uploads/2025/03/0-20250320.yaml
-- https://tizivpn.github.io/uploads/2025/03/1-20250320.yaml
-- https://tizivpn.github.io/uploads/2025/03/2-20250320.yaml
-- https://tizivpn.github.io/uploads/2025/03/3-20250320.yaml
-- https://tizivpn.github.io/uploads/2025/03/4-20250320.yaml
+- https://tizivpn.github.io/uploads/2025/03/0-20250322.yaml
+- https://tizivpn.github.io/uploads/2025/03/1-20250322.yaml
+- https://tizivpn.github.io/uploads/2025/03/2-20250322.yaml
+- https://tizivpn.github.io/uploads/2025/03/3-20250322.yaml
+- https://tizivpn.github.io/uploads/2025/03/4-20250322.yaml
 
 ### V2ray订阅链接
 
-- https://tizivpn.github.io/uploads/2025/03/0-20250320.txt
-- https://tizivpn.github.io/uploads/2025/03/1-20250320.txt
-- https://tizivpn.github.io/uploads/2025/03/2-20250320.txt
-- https://tizivpn.github.io/uploads/2025/03/3-20250320.txt
-- https://tizivpn.github.io/uploads/2025/03/4-20250320.txt
+- https://tizivpn.github.io/uploads/2025/03/0-20250322.txt
+- https://tizivpn.github.io/uploads/2025/03/1-20250322.txt
+- https://tizivpn.github.io/uploads/2025/03/2-20250322.txt
+- https://tizivpn.github.io/uploads/2025/03/3-20250322.txt
+- https://tizivpn.github.io/uploads/2025/03/4-20250322.txt
 
 ### Sing-box订阅链接
 
-- https://tizivpn.github.io/uploads/2025/03/20250320.json
+- https://tizivpn.github.io/uploads/2025/03/20250322.json
 
 ## 更多clash节点订阅 ：
 

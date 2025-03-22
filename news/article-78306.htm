@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://tizivpn.github.io/news/article-78306.htm" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>C语言指针高级篇</title>
+        <meta name="description" content="相信很多人都听过指针是c语言的灵魂！  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于指针的学习，往往也是最难的，也是最难搞懂的，那么今天我们一起来学习分析c语言的指针，" />
+        <link rel="icon" href="/assets/website/img/windowsclash/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="梯子VPN 推荐VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://tizivpn.github.io/news/article-78306.htm" />
+    <meta property="og:site_name" content="梯子VPN 推荐VPN免费节点订阅官网" />
+    <meta property="og:title" content="C语言指针高级篇" />
+    <meta property="og:image" content="https://tizivpn.github.io/uploads/20240524/a60a9b5a34b06f3d060ac27a7545be64.webp" />
+        <meta property="og:release_date" content="2025-03-21T10:30:11" />
+    <meta property="og:updated_time" content="2025-03-21T10:30:11" />
+        <meta property="og:description" content="相信很多人都听过指针是c语言的灵魂！  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于指针的学习，往往也是最难的，也是最难搞懂的，那么今天我们一起来学习分析c语言的指针，" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="C语言指针高级篇">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Place favicon.ico in the root directory -->
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="/assets/website/css/windowsclash/bootstrap-5.0.0-beta2.min.css" />
+    <link rel="stylesheet" href="/assets/website/css/windowsclash/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="/assets/website/css/windowsclash/tiny-slider.css" />
+    <link rel="stylesheet" href="/assets/website/css/windowsclash/animate.css" />
+    <link rel="stylesheet" href="/assets/website/css/windowsclash/main.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WMPG2996E0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WMPG2996E0');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+    <!-- ========================= preloader start ========================= -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="spinner">
+                <div class="spinner-container">
+                    <div class="spinner-rotator">
+                        <div class="spinner-left">
+                            <div class="spinner-circle"></div>
+                        </div>
+                        <div class="spinner-right">
+                            <div class="spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader end -->
+    <!-- ========================= header start ========================= -->
+    <header class="header">
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="/">
+                                                        <span>梯子VPN</span>
+                                                        </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <div class="ms-auto">
+                                    <ul id="nav" class="navbar-nav ms-auto">
+                                                                                <li class="nav-item">
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li class="nav-item">
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li class="nav-item">
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li class="nav-item">
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li class="nav-item">
+                                            <a href="/client.htm">客户端</a>
+                                        </li>
+                                                                            </ul>
+                                </div>
+                            </div>
+                            <!-- navbar collapse -->
+                        </nav>
+                        <!-- navbar -->
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- navbar area -->
+    </header>
+    <!-- ========================= header end ========================= -->
+    <!-- ========================= hero-section start ========================= -->
+    <section id="home" class="hero-section category">
+        <div class="container">
+            <div class="row align-items-center" style="margin-top: -5rem;">
+                <div class="col-xl-6 col-lg-6 col-md-10">
+                    <div class="hero-content">
+                        <h1>C语言指针高级篇</h1>
+                        <p>
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-lg-6">
+                    <div class="hero-image text-center text-lg-end">
+                        <img src="/assets/website/img/windowsclash/hero/hero-image.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========================= hero-section end ========================= -->
+    <!-- ========================= feature-section-1 end ========================= -->
+    <section id="feature-2" class="feature-section-2 pt-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h2> <a id="c_0" rel="nofollow"></a><strong>相信很多人都听过指针是c语言的灵魂！</strong><br /> </h2> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>对于指针的学习，往往也是最难的，也是最难搞懂的，那么今天我们一起来学习分析c语言的指针，体会c语言的魅力！</strong></p> <p>指针和指针应用大概分为一下几类：<br /> 1、字符指针<br /> 2、数组指针<br /> 3、指针数组<br /> 4、数组传参和指针传参<br /> 5、函数指针<br /> 6、函数指针数组<br /> 7、指向函数指针数组的指针</p> <p>这里我就不列举常见数据类型的指针（如：整形类型的指针int * 双精度类型的指针double *等等), 讲字符指针我会连带说下他们。</p> <h2> <a id="_14" rel="nofollow"></a>一、字符指针</h2> <p><strong>字符指针它的功能有：</strong><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、指向字符串常量（char *str = “abdefg”）<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、指向字符数组（有一个字符数组char str1[20] = {0}; char str = str1;）<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、当字符数组作为实参数传递时，形参实际上是字符指针。</p> <p>（1）在这里，我要提一下第1个功能， 当指向字符串常量时，是不能修改字符串里面的值的，因为常量无法修改，你可以访问它，但不可以修改。<br /> （2）字符串不同于字符，他后面是有结束符’\0’的，千万不能忽略！</p> <p><strong>接下来请大家做一道习题考察下自己的能力吧！</strong></p> <pre><code class="prism language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span> <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdlib.h&gt;</span></span> <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;string.h&gt;</span></span>  <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> 	<span class="token keyword">char</span> str1<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"wozhenshuai"</span><span class="token punctuation">;</span> 	<span class="token keyword">char</span> <span class="token operator">*</span>str2 <span class="token operator">=</span> <span class="token string">"wozhenshuai"</span><span class="token punctuation">;</span> 	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d, %d\n"</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>str1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">strlen</span><span class="token punctuation">(</span>str1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d, %d\n"</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>str2<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">strlen</span><span class="token punctuation">(</span>str2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 	<span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"pause"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> </code></pre> <blockquote> <p>正确答案是：<br /> 20，11<br /> 4，11</p> </blockquote> <p><strong>分析上述案例：</strong><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数组名，他一共有3个含义。<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、指向数组首元素的地址，<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、sizeof求数组大小，它默认为指向整个数组，上述一共20个元素，每个元素都是char类型，char占用一个字节，所以一共为20*1 = 20字节。<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、当对数组名取地址符&amp;默认是对整个数组取地址，因此&amp;str1+1 相当横跨整个数组。</p> <h2> <a id="_52" rel="nofollow"></a>二、数组指针&amp;指针数组</h2> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>数组指针和指针数组是比较容易搞混的，区分它们的关键在于重心是谁， 何解？ 举几个例子</strong></p> <blockquote> <p>char (*pa)[20];</p> </blockquote> <p><strong>提前声明： [] 优先级大于</strong>*</p> <p>上面这个例子， 由于(*pa) 加了括号， *的优先级会比[]高， 所以pa是数组指针，<br /> 去掉(*pa), 剩下char [20], 因此，这个数组指针指向的是char [20]的数组，长度为20，元素类型为char。</p> <blockquote> <p>char *pa[20];</p> </blockquote> <p>的优先级小于[], 因此pa是指针数组， 去掉pa[20], 剩下char指针, 所以这个指针数组里面的成员是char指针类型。</p> <p><em>同样可以看出看出类型后，看内部成员类型可以采用去除法， 这个方法很有效。</em></p> <p><strong>接下来我们来做几道例题，巩固下自己，分析一下是什么类型？指向什么？</strong></p> <blockquote> <p>（1）int *p1[6];<br /> （2）int (*p3)[6];</p> </blockquote> <p><strong>分析总结：</strong><br /> （1）第一道题先观察优先级，很明显[]大于*，因此这是一个数组，去掉p1[6]，剩下int*，因此这是一个存放int*类型的数组，数组里面有6个元素，每个元素都是int *型的。<br /> （2）同样观察优先级，（*p1）大于[]，因此这是一个指针，去掉（*p3)，剩下int [6], 因此这是一个指向int [6]数组的指针，</p> <h2> <a id="_78" rel="nofollow"></a>三、数组传参和指针传参</h2> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>数组作为实参传递，接受的形参其实是指针，指针传参，则用对应的指针接受。</strong></p> <p><strong>下面我们做来做几道习题，通过习题来讲解传参问题</strong></p> <p><strong>测试1</strong></p> <pre><code class="prism language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span> </span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span>p<span class="token punctuation">,</span> <span class="token keyword">int</span> sz<span class="token punctuation">)</span>  <span class="token punctuation">{<!-- --></span>     	<span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>     	<span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>sz<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>     	<span class="token punctuation">{<!-- --></span>         		<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">(</span>p<span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     	<span class="token punctuation">}</span>  <span class="token punctuation">}</span>  <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token punctuation">{<!-- --></span>        <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{<!-- --></span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">}</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> <span class="token operator">*</span>p <span class="token operator">=</span> arr<span class="token punctuation">;</span>         <span class="token keyword">int</span> sz <span class="token operator">=</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">/</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token function">print</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> sz<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> </code></pre> <p><strong>这里arr作为实参传入， 还需要传入数组长度。<br /> 为什么呢？这是因为传递的数组名（也就是数组首元素地址），他是用指针接收的，对于数组的长度并不知晓！如果有使用数组长度等条件（如题上遍历数组元素）需要将长度作为参数传递！</strong></p> <p>使用sizeof(数组名) / sizeof(数组首元素) = 数组长度。 这是一个非常方便、轻巧的方式， 希望大家写的时候用起来!</p> <p><strong>测试2</strong></p> <pre><code class="prism language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span> </span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token operator">*</span> ptr<span class="token punctuation">)</span>  <span class="token punctuation">{<!-- --></span>   	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"num = %d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token operator">*</span>ptr<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token punctuation">}</span>  <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token punctuation">{<!-- --></span>   	<span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{<!-- --></span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span> 	<span class="token function">test</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>	 	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> </code></pre> <p><strong>上面的代码对吗？ 请各位小伙伴运行下这段代码，看看会出现什么错误。</strong><br /><strong>很明显，实参和形参类型不匹配，二维数组的数据类型不是二级指针，而是数组指针，因此形参写成int</strong> (*a)[4]。</p> <h2> <a id="_128" rel="nofollow"></a>四、函数指针</h2> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>函数是有地址的，和指针一样。那么有地址，我们对它进行取地址会出现什么呢？ 结果是还是它本身，因此函数去地址还是它本身。<br /> 如果对函数取地址，我们用什么接收它呢？ 对它去取地址会是什么类型呢？</strong></p> <pre><code class="prism language-c"><span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token punctuation">{<!-- --></span>   	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"hehe\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>   <span class="token comment">//下面pfun1和pfun2哪个有能力存放test函数的地址？ </span> <span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">*</span>pfun1<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token keyword">void</span> <span class="token operator">*</span><span class="token function">pfun2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre> <blockquote> <p>1、void (*pfun1)();<br /> 2、void *pfun2();</p> </blockquote> <p><strong>答案是void ( * pfun1)()来接收它的地址。</strong><br /><strong>和数组指针一样看法一样， 可以看出这是一个指针， 去掉( * pfun1)之后， 剩余void ()， 这是一个函数类型， 返回值为void类型， 函数参数为空。 （只有带()就是函数类型）。</strong></p> <p><strong>那么它有什么用呢？我们可以调用函数，传递函数指针，然后解引用函数指针然后调用函数，使用函数内部的功能。虽说可以直接调用，但是函数指针可以构建成函数指针数组，数组里面都是函数指针，我们调用就像使用数组一样方便。而且更加系统化！</strong></p> <h2> <a id="_151" rel="nofollow"></a>五、函数指针数组指针&amp;&amp;函数指针数组</h2> <p><strong>下面就是一些扩展！</strong></p> <pre><code class="prism language-c"><span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> str<span class="token punctuation">)</span>  <span class="token punctuation">{<!-- --></span>   	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> str<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span>  <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token punctuation">{<!-- --></span>   	<span class="token comment">//函数指针pfun  </span> 	<span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">*</span>pfun<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">=</span> test<span class="token punctuation">;</span>   	<span class="token comment">//函数指针的数组pfunArr </span>  	<span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">*</span>pfunArr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> str<span class="token punctuation">)</span><span class="token punctuation">;</span>    	pfunArr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> test<span class="token punctuation">;</span>    	<span class="token comment">//指向函数指针数组pfunArr的指针ppfunArr  </span>  	<span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token operator">*</span>ppfunArr<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token operator">&amp;</span>pfunArr<span class="token punctuation">;</span>    	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>   <span class="token punctuation">}</span> </code></pre> <blockquote> <p>void (<em>pfunArr[5])(const char</em> str);</p> </blockquote> <p>void (*pfunArr[5])(const char *str);<br /> 首先先找到变量名pfunArr，观察发现它是一个<strong>数组</strong>，去掉pfunArr[5]，<br /> 剩下<strong>void ( * )(const char *str)</strong>, 观察发现()里面是 *，是<strong>指针数组</strong>， 去掉( * ), 剩下void (const char * str), 这是函数类型， 所以是<strong>函数指针数组</strong>。<br /> pfunArr是一个长度为5的数组。<br /> 数组里面的元素为函数指针，函数的参数为(const char *str)，返回值为void。</p> <blockquote> <p>void (*(<em>ppfunArr)[10])(const char</em>)</p> </blockquote> <p>void( * ( * ppfunArr)[10])(const char * );<br /> 首先先找到ppfunArr,观察发现它是一个<strong>指针</strong>，去掉 * ppfunArr, 剩下 void( * [10])(const char * )， （）里面是( * [10])，观察发现它是指针数组，因此它是<strong>指向指针数组的指针</strong>， 去掉[10], 剩下void ( * )(const char * ), 观察发现它是函数指针， 故这是一个<strong>指向函数指针数组的指针</strong>，函数的参数为const char*, 返回值为void。</p> <h2> <a id="_185" rel="nofollow"></a>结尾</h2> <p><strong>函数指针数组和函数指针数组指针是对函数指针更好的调用，更加方便地使用函数功能，他的使用和数组指针和指针数组地使用比较相似，就只是解引用后是函数调用而已！大家多多品味就可以了，很好理解的！<br /> 好啦，今天就分享到这里了，最近忙着期末考试，随后空闲时候，我会继续分享和大家共同学习，感受c语言的魅力！</strong></p> <p><strong>ps：</strong><br /><strong>致敬以前写的博客， 当时还不太会写博客， 一些语法不会， 现在修复很多， 这篇博客算是能看啦！加油，自己！！！</strong></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-77604.htm">猪的疫苗接种间隔时间（猪疫苗间隔多少天可打别种疫苗）</a></p>
+                                        <p>下一个：<a href="/news/article-78307.htm">Echarts在vue中的基本使用以及常用配置</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-72235.htm" title="java数组去重">java数组去重</a></li>
+                        <li class="py-2"><a href="/news/article-71572.htm" title="Redis主从同步详解">Redis主从同步详解</a></li>
+                        <li class="py-2"><a href="/news/article-70624.htm" title="mysql中的日期时间类型有哪些？">mysql中的日期时间类型有哪些？</a></li>
+                        <li class="py-2"><a href="/news/article-77604.htm" title="猪的疫苗接种间隔时间（猪疫苗间隔多少天可打别种疫苗）">猪的疫苗接种间隔时间（猪疫苗间隔多少天可打别种疫苗）</a></li>
+                        <li class="py-2"><a href="/news/article-78306.htm" title="C语言指针高级篇">C语言指针高级篇</a></li>
+                        <li class="py-2"><a href="/news/article-76915.htm" title="宠物店一般卖几个月的猫咪（宠物店买几个月的猫最好）">宠物店一般卖几个月的猫咪（宠物店买几个月的猫最好）</a></li>
+                        <li class="py-2"><a href="/news/article-73556.htm" title="动物疫苗和人体疫苗生产有什么区别呢视频（动物疫苗的概念）">动物疫苗和人体疫苗生产有什么区别呢视频（动物疫苗的概念）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-node-share-links.htm" title="梯子VPN | 3月18日18M/S|免费SSR/V2ray/Shadowrocket/Clash订阅节点">梯子VPN | 3月18日18M/S|免费SSR/V2ray/Shadowrocket/Clash订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-76236.htm" title="广州宠物批发市场哪里便宜（广州哪里有宠物用品批发市场）">广州宠物批发市场哪里便宜（广州哪里有宠物用品批发市场）</a></li>
+                        <li class="py-2"><a href="/news/article-72236.htm" title="动物防疫法动物产品包括下列哪些内容（动物防疫法解读）">动物防疫法动物产品包括下列哪些内容（动物防疫法解读）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">42</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- ========================= footer start ========================= -->
+    <footer class="footer pt-160">
+        <div class="container">
+            <div class="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                <p>梯子VPN 推荐VPN免费节点订阅官网 版权所有</p>
+                <p>Powered by WordPress</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ========================= footer end ========================= -->
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+    <!-- ========================= JS here ========================= -->
+    <script src="/assets/website/js/frontend/windowsclash/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsclash/bootstrap-5.0.0-beta2.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsclash/tiny-slider.js"></script>
+    <script src="/assets/website/js/frontend/windowsclash/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsclash/polyfill.js"></script>
+    <script src="/assets/website/js/frontend/windowsclash/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
