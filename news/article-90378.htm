@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://tizivpn.github.io/news/article-90378.htm" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>IDEA中配置maven环境</title>
+        <meta name="description" content="目录 提前下载好maven文件 在IDEA软件中配置maven环境 1.创建一个maven项目 2.配置maven文件 3.在IDEA里的file下的setting中配置maven文件     在ma" />
+        <link rel="icon" href="/assets/website/img/windowsclash/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="梯子VPN 推荐VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://tizivpn.github.io/news/article-90378.htm" />
+    <meta property="og:site_name" content="梯子VPN 推荐VPN免费节点订阅官网" />
+    <meta property="og:title" content="IDEA中配置maven环境" />
+    <meta property="og:image" content="https://tizivpn.github.io/uploads/20240524/a60a9b5a34b06f3d060ac27a7545be64.webp" />
+        <meta property="og:release_date" content="2025-04-07T09:02:11" />
+    <meta property="og:updated_time" content="2025-04-07T09:02:11" />
+        <meta property="og:description" content="目录 提前下载好maven文件 在IDEA软件中配置maven环境 1.创建一个maven项目 2.配置maven文件 3.在IDEA里的file下的setting中配置maven文件     在ma" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="IDEA中配置maven环境">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Place favicon.ico in the root directory -->
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="/assets/website/css/windowsclash/bootstrap-5.0.0-beta2.min.css" />
+    <link rel="stylesheet" href="/assets/website/css/windowsclash/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="/assets/website/css/windowsclash/tiny-slider.css" />
+    <link rel="stylesheet" href="/assets/website/css/windowsclash/animate.css" />
+    <link rel="stylesheet" href="/assets/website/css/windowsclash/main.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WMPG2996E0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WMPG2996E0');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+    <!-- ========================= preloader start ========================= -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="spinner">
+                <div class="spinner-container">
+                    <div class="spinner-rotator">
+                        <div class="spinner-left">
+                            <div class="spinner-circle"></div>
+                        </div>
+                        <div class="spinner-right">
+                            <div class="spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader end -->
+    <!-- ========================= header start ========================= -->
+    <header class="header">
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="/">
+                                                        <span>梯子VPN</span>
+                                                        </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <div class="ms-auto">
+                                    <ul id="nav" class="navbar-nav ms-auto">
+                                                                                <li class="nav-item">
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li class="nav-item">
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li class="nav-item">
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li class="nav-item">
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li class="nav-item">
+                                            <a href="/client.htm">客户端</a>
+                                        </li>
+                                                                            </ul>
+                                </div>
+                            </div>
+                            <!-- navbar collapse -->
+                        </nav>
+                        <!-- navbar -->
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- navbar area -->
+    </header>
+    <!-- ========================= header end ========================= -->
+    <!-- ========================= hero-section start ========================= -->
+    <section id="home" class="hero-section category">
+        <div class="container">
+            <div class="row align-items-center" style="margin-top: -5rem;">
+                <div class="col-xl-6 col-lg-6 col-md-10">
+                    <div class="hero-content">
+                        <h1>IDEA中配置maven环境</h1>
+                        <p>
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-lg-6">
+                    <div class="hero-image text-center text-lg-end">
+                        <img src="/assets/website/img/windowsclash/hero/hero-image.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========================= hero-section end ========================= -->
+    <!-- ========================= feature-section-1 end ========================= -->
+    <section id="feature-2" class="feature-section-2 pt-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p id="main-toc"><strong>目录</strong></p> <p id="%E6%8F%90%E5%89%8D%E4%B8%8B%E8%BD%BD%E5%A5%BDmaven%E6%96%87%E4%BB%B6-toc" style="margin-left:0px;"><a href="#%E6%8F%90%E5%89%8D%E4%B8%8B%E8%BD%BD%E5%A5%BDmaven%E6%96%87%E4%BB%B6" rel="nofollow">提前下载好maven文件</a></p> <p id="%E5%9C%A8IDEA%E8%BD%AF%E4%BB%B6%E4%B8%AD%E9%85%8D%E7%BD%AEmaven%E7%8E%AF%E5%A2%83-toc" style="margin-left:0px;"><a href="#%E5%9C%A8IDEA%E8%BD%AF%E4%BB%B6%E4%B8%AD%E9%85%8D%E7%BD%AEmaven%E7%8E%AF%E5%A2%83" rel="nofollow">在IDEA软件中配置maven环境</a></p> <p id="1.%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAmaven%E9%A1%B9%E7%9B%AE-toc" style="margin-left:40px;"><a href="#1.%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAmaven%E9%A1%B9%E7%9B%AE" rel="nofollow">1.创建一个maven项目</a></p> <p id="2.%E9%85%8D%E7%BD%AEmaven%E6%96%87%E4%BB%B6-toc" style="margin-left:40px;"><a href="#2.%E9%85%8D%E7%BD%AEmaven%E6%96%87%E4%BB%B6" rel="nofollow">2.配置maven文件</a></p> <p id="%C2%A03.%E5%9C%A8IDEA%E9%87%8C%E7%9A%84file%E4%B8%8B%E7%9A%84setting%E4%B8%AD%E9%85%8D%E7%BD%AEmaven%E6%96%87%E4%BB%B6-toc" style="margin-left:40px;"><a href="#%C2%A03.%E5%9C%A8IDEA%E9%87%8C%E7%9A%84file%E4%B8%8B%E7%9A%84setting%E4%B8%AD%E9%85%8D%E7%BD%AEmaven%E6%96%87%E4%BB%B6" rel="nofollow">3.在IDEA里的file下的setting中配置maven文件</a></p> <p id="%E8%BF%99%E6%A0%B7IDEA%E4%B8%ADmaven%E5%B0%B1%E9%85%8D%E7%BD%AE%E5%A5%BD%E4%BA%86%5C(%5Eo%5E)%2F~-toc" style="margin-left:0px;"> <hr id="hr-toc"/> </h1> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220603/51bbdeb67fe0f799fe1053afb1e7efa9.jpg"></p> <p><strong>在maven文件夹下的conf文件夹中的settings.xml文档打开在其中加入一串代码，如图所示</strong></p> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220603/b71c647130d3f60a22f32e9f555fd169.jpg"></p> </h1> <h2 id="1.%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAmaven%E9%A1%B9%E7%9B%AE"><a id="1_27" rel="nofollow"></a>1.创建一个maven项目</h2> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220603/f94afe809099a95f92c813dd0e911245.jpg"></p> <p><strong>将这些选中后点击next</strong></p> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220603/fdf79583714f72c098e1502d77f57bd1.jpg"></p> <p><strong>&nbsp;文件命名后点击next</strong></p> <h2 id="2.%E9%85%8D%E7%BD%AEmaven%E6%96%87%E4%BB%B6"><a id="2_45" rel="nofollow"></a>2.配置maven文件</h2> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220603/be9abd3c61064dd1e3c31d2d6c8e908c.jpg"></p> <p><strong>配置完成后如图所示</strong></p> <p style="text-align:center;"><strong><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220603/c2a352b9346cfb5359e98765f9ce29fe.jpg"></strong></p> <p><strong>最后点击finish完成</strong></p> <p style="text-align:center;"> </h1> <h2 id="%C2%A03.%E5%9C%A8IDEA%E9%87%8C%E7%9A%84file%E4%B8%8B%E7%9A%84setting%E4%B8%AD%E9%85%8D%E7%BD%AEmaven%E6%96%87%E4%BB%B6">&nbsp;3.在IDEA里的file下的setting中配置maven文件</h2> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220603/a8e29aac2599c9d0a6db69b186e0be0a.jpg"></p> <p><strong>&nbsp;如上图所示一样选择文件</strong></p> </h1> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-90375.htm">动态修改springboot中的scheduling(动态修改定时任务执行时间)</a></p>
+                                        <p>下一个：<a href="/news/article-90922.htm">win11系统如何添加pdf虚拟打印机</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-89613.htm" title="动物医院主管部门（动物医院归哪里管）">动物医院主管部门（动物医院归哪里管）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-10-free-v2ray-subscribe.htm" title="梯子VPN | 3月10日18.6M/S|免费SSR/Shadowrocket/Clash/V2ray订阅节点">梯子VPN | 3月10日18.6M/S|免费SSR/Shadowrocket/Clash/V2ray订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-76235.htm" title="猫咪养多久能认识主人（养猫多久它会认识你）">猫咪养多久能认识主人（养猫多久它会认识你）</a></li>
+                        <li class="py-2"><a href="/news/article-87435.htm" title="妙三多疫苗间隔多久打一针最好（妙三多疫苗间隔多久打一针最好呢）">妙三多疫苗间隔多久打一针最好（妙三多疫苗间隔多久打一针最好呢）</a></li>
+                        <li class="py-2"><a href="/news/article-83138.htm" title="让猫挠了几天之内打针有用吗（让猫挠了用打针么）">让猫挠了几天之内打针有用吗（让猫挠了用打针么）</a></li>
+                        <li class="py-2"><a href="/news/article-88157.htm" title="宠物粮食品牌起名大全图片及价格 宠物粮食品牌起名大全图片及价格表">宠物粮食品牌起名大全图片及价格 宠物粮食品牌起名大全图片及价格表</a></li>
+                        <li class="py-2"><a href="/news/article-83139.htm" title="深圳哪里有宠物领养中心啊（深圳哪里有宠物领养的地方）">深圳哪里有宠物领养中心啊（深圳哪里有宠物领养的地方）</a></li>
+                        <li class="py-2"><a href="/news/article-83859.htm" title="Envoy熔断限流实践基于Rainbond插件实现熔断">Envoy熔断限流实践基于Rainbond插件实现熔断</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-free-subscribe-node.htm" title="梯子VPN | 3月15日19.4M/S|免费SSR/V2ray/Shadowrocket/Clash订阅节点">梯子VPN | 3月15日19.4M/S|免费SSR/V2ray/Shadowrocket/Clash订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-30-clash-v2ray-ss-ssr.htm" title="梯子VPN | 3月30日18.4M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点">梯子VPN | 3月30日18.4M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">69</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- ========================= footer start ========================= -->
+    <footer class="footer pt-160">
+        <div class="container">
+            <div class="copyright">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <p>梯子VPN 推荐VPN免费节点订阅官网 版权所有</p>
+                <p>Powered by WordPress</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ========================= footer end ========================= -->
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+    <!-- ========================= JS here ========================= -->
+    <script src="/assets/website/js/frontend/windowsclash/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsclash/bootstrap-5.0.0-beta2.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsclash/tiny-slider.js"></script>
+    <script src="/assets/website/js/frontend/windowsclash/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsclash/polyfill.js"></script>
+    <script src="/assets/website/js/frontend/windowsclash/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
